@@ -1,0 +1,46 @@
+<!--pages/chat/chat.wxml-->
+<block wx:for="{{chatlists}}" wx:for-index="cid" wx:for-item="chat">
+	<!--本账户用户名，向右靠齐-->
+	<view class="page">
+		<view class="chat self" wx:if="{{userInfo.nickName == chat.nickname}}">
+			<!--chat self表示同时拥有2个类-->
+			<!--用户显示内容-->
+			<view class="right">
+				<!--右边-->
+				<view class="content">{{chat.content}}</view>
+			</view>
+			<!--头像-->
+			<view class="left">
+				<!--左边-->
+				<image src="{{chat.avatar}}"></image>
+			</view>
+		</view>
+
+		<!--其他用户，向左靠齐-->
+		<view class="chat" wx:else>
+			<view class="left">
+				<!--左边-->
+				<image src="{{chat.avatar}}"></image>
+				<!--其他用户头像-->
+			</view>
+			<view class="right">
+				<!--右边-->
+				<view class="nickname">{{chat.nickname}}</view>
+				<!--其他用户名-->
+				<view class="content">{{chat.content}}</view>
+				<!--其他用户显示内容-->
+			</view>
+		</view>
+	</view>
+</block>
+<view class="block">
+	<text>隐藏块</text>
+</view>
+<form>
+	<view class="form">
+		<!--绑定数据-->
+		<input class="input" auto-focus placeholder="请输入内容" bindinput="bindInputData" />
+		<!--发送信息并初始化值-->
+		<button class="button" type="primary" form-type="reset" bindtap="sendMsg">发送</button>
+	</view>
+</form>

@@ -1,0 +1,52 @@
+<swiper class='lunbo' indicator-dots="true" autoplay="true" interval="3000">
+	<swiper-item>
+		<image src='../images//begin/begin-ai1.png'></image>
+	</swiper-item>
+	<swiper-item>
+		<image src='../images/begin/begin-ai2.jpg'></image>
+	</swiper-item>
+	<swiper-item>
+		<image src='../images/begin/begin-ai3.jpg'></image>
+	</swiper-item>
+</swiper>
+
+<view class="selection">
+	<view class="header">
+		<text class="text-all">精品展示</text>
+	</view>
+	<view class="content">
+		<view class="content-item">
+			<image src="../images/begin/chat.jpg"></image>
+			<view class="content-item-text">
+				<text>智能聊天</text>
+			</view>
+		</view>
+		<view class="content-item">
+			<image src="../images/begin/picture.jpg"></image>
+			<view class="content-item-text">
+				<text>图片识别</text>
+			</view>
+		</view>
+		<view class="content-item">
+			<image src="../images/begin/translate.jpg"></image>
+			<view class="content-item-text">
+				<text>中英翻译</text>
+			</view>
+		</view>
+		<view class="content-item">
+			<image src="../images/begin/compute.jpg"></image>
+			<view class="content-item-text">
+				<text>智能计算</text>
+			</view>
+		</view>
+	</view>
+</view>
+	<view class="header">
+		<text class="text-all">功能实现</text>
+	</view>
+<view class='rowLayout'>
+	<button style='margin-left:4px;margin-right:4px;margin-top:4px;margin-bottom:4px;background-color:skyblue;width:100px;height:76px;' bindtap="bindViewTap1" src="{{userInfo.avatarUrl}}" mode="cover"><text class='word'>智能聊天</text></button>
+	<button style='margin-left:4px;margin-right:4px;margin-top:4px;margin-bottom:4px;background-color:skyblue;width:100px;height:76px;' bindtap="bindViewTap2" src="{{userInfo.avatarUrl}}" mode="cover"><text class='word'>图片识别</text></button>
+	<button style='margin-left:4px;margin-right:4px;margin-top:4px;margin-bottom:4px;background-color:skyblue;width:100px;height:76px;' bindtap="bindViewTap3" src="{{userInfo.avatarUrl}}" mode="cover"><text class='word'>中英翻译</text></button>
+	<button style='margin-left:4px;margin-right:4px;margin-top:4px;margin-bottom:4px;background-color:skyblue;width:100px;height:76px;' bindtap="bindViewTap4" src="{{userInfo.avatarUrl}}" mode="cover"><text class='word'>智能计算</text></button>
+</view>

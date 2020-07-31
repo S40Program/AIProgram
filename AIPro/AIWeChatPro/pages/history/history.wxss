@@ -1,0 +1,24 @@
+/* pages/history/history.wxss */
+page{
+  height: 100%
+}
+.content{
+  margin: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing:  border-box;
+  background:rgba(139, 217, 248, 0.5);
+  padding-top: 25rpx;
+}
+.item{
+  background-color: white;
+  border-radius: 10px;
+  text-align: right;
+  width: 720rpx;
+  height: 200rpx;
+  line-height:200rpx;
+  margin-bottom: 20rpx;  
+  font-size:30px;
+}

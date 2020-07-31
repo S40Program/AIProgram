@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/begin/begin",
+    "pages/compute/compute",
+    "pages/history/history",
+    "pages/translate/translate",
+    "pages/picture/picture",
+    "pages/chat/chat",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "2053人工智能Robot",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#eeeeee"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  
+  "plugins": {
+    "WechatSI": {
+      "version": "0.3.4",
+      "provider": "wx069ba97219f66d99"
+    }
+  }
+
+}

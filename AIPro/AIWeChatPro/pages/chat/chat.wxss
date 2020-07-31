@@ -1,0 +1,123 @@
+/* pages/chat/chat.js.wxss */
+page{
+  background-color: rgb(247, 247, 247);
+}/*元素选择器，选择所有元素*/
+
+.chat {/*类选择器*/
+  display: flex;
+  /*弹性盒子，头像*/
+  align-items: center;
+  margin-top: 15px;
+}
+
+.self {
+  justify-content: flex-end;
+  /*靠右对齐*/
+}
+
+.chat .left {/*中间有空格，父节点是chat类，字节点是left类*/
+  align-self: flex-start;/*中间无空格，表示同时拥有chat和left类*/
+  /*靠左对齐*/
+}
+
+.chat .left image {/*头像*/
+  /*头像大小*/
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  /*向元素添加圆角边框*/
+  margin: 15rpx;
+}
+
+.chat .right {
+  margin-right: 20rpx;
+  /*外边距,屏幕宽度一般为750rpx，750rpx=375px*/
+  margin-left: 10px;
+}
+
+.chat .right .nickname {/*用户名*/
+  font-size: 14px;
+  color: #aaa;
+}
+
+.chat .right .content {/*说话内容*/
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 0 8px;/*所有内边距属性，上右下左*/
+  line-height: 28px;/*使用百分比设置行高*/
+  font-size: 14px;
+  position: relative;/*设置定位类型为相对定位*/
+  min-height: 40px;/*设置段落的最小高度*/
+}
+
+.self .right .content {
+  background-color: #07e4e4;
+}
+
+.chat .right .content::before {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border:10px solid transparent;
+  border-right-color: #fff;
+  position: absolute;
+  left: -18px;
+  top: 10px;
+}
+
+.self .right .content::before {
+  border: 0;
+}
+
+.self .right .content::after {
+  content: ' ';
+  display: block;
+  width: 0;
+  height: 0;
+  border:10px solid transparent;
+  border-left-color: #07e4e4;
+  position: absolute;
+  right: -18px;
+  /*向右移动多少像素的距离*/
+  top: 10px;
+  /*距顶部多少像素的距离*/
+
+}
+.form{/*输入框整体*/
+  width: 100vw;
+  height: 16vw;
+  border-top: 1px solid #aaa;
+  background-color: #f1f1f1;
+  position: fixed;/*固定定位*/
+  bottom: 0;/*底端距离为0*/
+  display: flex;
+  align-items: center;
+  z-index: 20;
+}
+
+.input{/*输入框*/
+  width: 285px;
+  height: 36px;
+  background-color: #fff;
+  border-radius: 20px;
+  margin-left: 1vw;
+  padding: 0 10px;/*上下内边距*/
+  font-size: 28rpx;
+  color: #444;
+}
+
+.button{/*发送按钮*/
+  width: 70px !important;/*按钮，提升权重*/
+  height: 40px;
+  padding: 8px 0;
+  margin-right: 4px;
+}
+
+.block{/*隐藏块*/
+  width: 100vw;
+  height: 16vw;
+  margin-top: 56vw;
+  border-top: 1px solid #aaa;
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,32 @@
+<!--ai.wxml-->
+<view class="page">
+	<view class="page__hd">
+		<view class="page__title">Image Recognition Room</view>
+		<view class="page__desc">欢迎来到图片识别室</view>
+	</view>
+
+	<view class="button">
+	<button class="selfbut" style="width:120px" type="primary"  bindtap="get_Animal_image">上传动物图片</button>
+	<button class="selfbut" style="width:120px" type="primary"  bindtap="get_Plant_image">上传植物图片</button>
+	<button class="selfbut" style="width:120px" type="primary"  bindtap="get_Car_image">上传汽车图片</button>
+	</view>
+
+	<view class="page__image">
+		<image src="{{imageUrl}}" mode="aspectFit" />
+	</view>
+
+	<view class="recognition_btn"><!--识别图片按钮-->
+		<button bindtap="recognition_image" disabled="{{btn_enable}}">识别该图片</button>
+	</view>
+
+	<view class="page__hd">
+		<view class="icon-box"><!--图标框-->
+			<icon type="{{load_logo}}" size="64"></icon>
+			<view class="icon-box__ctn">
+				<view class="icon-box__title">{{load_title}}</view><!--识别成功显示内容-->
+				<view class="icon-box__desc">{{load_message}}</view>
+			</view>
+		</view>
+	</view>
+
+</view>
