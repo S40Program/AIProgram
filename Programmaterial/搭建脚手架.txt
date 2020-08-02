@@ -1,0 +1,5 @@
+ npm init egg --type=simple//生成egg项目的基本构架
+$ mkdir egg-example && cd egg-example
+$ npm init egg --type=simple
+$ npm i//快速使用脚手架，快速生成项目
+c:\windows\system32\drivers\etc\hosts//添加IP地址和域名，注意前面标有#为注释
